@@ -1,0 +1,176 @@
+/* Reset basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body background */
+body {
+    background-color: #001f3f; /* Dark blue background */
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+/* Container for layout */
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: #0074D9; /* Blue color */
+    width: 120px; /* Collapsed width */
+    height: 100%;
+    padding-top: 20px;
+    color: #ffffff;
+    overflow: hidden;
+    transition: width 0.3s ease; /* Smooth transition */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     justify-content: center; /*Center menu items vertically */
+    position: relative;
+}
+
+.sidebar:hover {
+    width: 350px; /* Expanded width on hover */
+}
+
+/* Logo styling - always visible */
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Search box styling */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.sidebar:hover .search-box {
+    opacity: 1;
+}
+
+.search-box input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 2px solid #b8860b; /* Darker yellow shade */
+    width: 100%;
+}
+
+.search-box button {
+    padding: 5px;
+    background-color: #ffd700; /* Yellow color for the button */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Optional: add hover effect to button */
+.search-box button:hover {
+    background-color: #e6c200; /* Slightly darker yellow on hover */
+}
+
+
+/* Sidebar menu styling */
+.sidebar ul {
+    list-style-type: none;
+    padding: 35px;
+    width: 100%;
+    margin-top: 30px; /* Add space from logo */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    /* padding-left: 20px; Padding for left-aligned look */
+    transition: all 0.3s ease; /* Smooth transition */
+    
+}
+
+.sidebar:hover ul {
+    align-items: center; /* Center-align items when sidebar is expanded */
+    padding-left: 0; /* Remove left padding when centered */
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    padding-left: 10px; 
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start; /* Left align items by default*/
+     transition: all 0.3s ease; /*Smooth transition */
+}
+
+.sidebar:hover ul li {
+    justify-content: center; /* Center items when sidebar is expanded */
+}
+
+.sidebar ul li a {
+    color: #00ff00; /* Green color for menu items */
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for icon */
+}
+
+.sidebar ul li a span {
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+    transition: transform 0.3s ease; /* Smooth transition for icon */
+}
+
+.sidebar:hover ul li a span {
+    opacity: 1; /* Show text when sidebar is expanded */
+}
+
+.sidebar ul li a:hover {
+    color: #FFFF00; /* Yellow color on hover */
+    text-decoration: underline;
+    transform: translateX(20px); /* Move icon and text together */
+}
+
+/* Main content styling */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+}
+
+.page {
+    display: none; /* Hide all pages by default */
+}
+
+.page.active {
+    display: block; /* Show only the active page */
+}

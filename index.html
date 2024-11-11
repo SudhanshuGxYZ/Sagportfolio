@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Sidebar with Dynamic Pages</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="icons/SagLogo.png" alt="Main Logo">
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button>🔍</button>
+            </div>
+            <ul>
+                <li><a href="#" onclick="showPage('home')"><img src="icons/home.png" alt="Home Icon" class="menu-icon"><span>Home</span></a></li>
+                <li><a href="#" onclick="showPage('about')"><img src="icons/about.png" alt="About Icon" class="menu-icon"><span>About</span></a></li>
+                <li><a href="#" onclick="showPage('skills')"><img src="icons/skills.png" alt="Skills Icon" class="menu-icon"><span>Skills</span></a></li>
+                <li><a href="#" onclick="showPage('projects')"><img src="icons/projects.png" alt="Projects Icon" class="menu-icon"><span>Projects</span></a></li>
+                <li><a href="#" onclick="showPage('contacts')"><img src="icons/contacts.png" alt="Contacts Icon" class="menu-icon"><span>Contacts</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main content area -->
+        <div class="main-content">
+            <section id="home" class="page active">
+                <h1>Home Page</h1>
+                <p>Welcome to the home page!</p>
+            </section>
+            <section id="about" class="page">
+                <h1>About Page</h1>
+                <p>Learn more about us on this page.</p>
+            </section>
+            <section id="skills" class="page">
+                <h1>Skills Page</h1>
+                <p>Explore our skills here.</p>
+            </section>
+            <section id="projects" class="page">
+                <h1>Projects Page</h1>
+                <p>Discover our projects on this page.</p>
+            </section>
+            <section id="contacts" class="page">
+                <h1>Contacts Page</h1>
+                <p>Get in touch with us here.</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+</html>
