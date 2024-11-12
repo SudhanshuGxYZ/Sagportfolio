@@ -7,7 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: cyan;
+    background-color: #ffffff;
+    color: rgb(255, 208, 0);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -45,11 +46,11 @@ body.light-mode .sidebar ul li a:hover {
 /* Toggle Button */
 #modeToggle {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
     padding: 10px;
     background-color: #ffd700;
-    border: none;
+    border: solid #0074D9;
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
@@ -65,6 +66,7 @@ body.dark-mode #modeToggle {
 body.light-mode #modeToggle {
     background-color: #000000;
     color: #333;
+    border-color: #00ff00;
 }
 
 /* Adjust other elements for light mode */
@@ -77,8 +79,16 @@ body.light-mode .search-box button {
     color: #ffffff;
 }
 body.light-mode .sidebar ul li a.active{
- background-color: #00fff2;
+ background-color: #00c9d3;
  color: #0004ff;
+}
+
+body.dark-mode .sidebar ul li a.active{
+    border-color: #ffffff;
+}
+
+body.light-mode .sidebar ul li a.active{
+   border-color: #00ff00;
 }
 
 body.light-mode .menu-icon {
@@ -116,7 +126,7 @@ body.light-mode .menu-icon {
 .logo {
     width: 100px;
     height: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .logo img {
@@ -201,7 +211,7 @@ body.light-mode .menu-icon {
 
 .sidebar:hover ul li {
     justify-content: flex-start; /* Center items when sidebar is expanded */
-    padding-left: 120px;
+    padding-left: 100px;
 }
 
 .sidebar ul li a {
@@ -252,6 +262,7 @@ body.light-mode .menu-icon {
 .sidebar ul li a.active {
     background-color: #ffff00; /* Yellow background for active menu item */
     color: #000000; /* Dark text for better readability on yellow */
+    border:solid;
     border-radius: 5px; /* Optional: Add rounded corners to highlight */
     transition: background-color 0.3s ease; /* Smooth transition */
 }
