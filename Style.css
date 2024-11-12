@@ -5,11 +5,84 @@
     box-sizing: border-box;
 }
 
-/* Body background */
 body {
-    background-color: #001f3f; /* Dark blue background */
     font-family: Arial, sans-serif;
+    color: cyan;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light and dark mode background colors */
+body.light-mode {
+    background-color: rgb(0, 0, 0);
+    color: cyan;
+}
+
+body.light-mode .sidebar {
+    background-color: rgb(76, 76, 76);
+    color: yellow ;
+}
+
+body.light-mode .sidebar ul li a {
+    color: rgb(0, 255, 0);
+}
+
+body.light-mode .sidebar ul li a:hover {
+    color: yellow;
+}
+
+/* Sidebar colors */
+.sidebar {
+    background-color: #0074D9;
+    width: 150px;
+    padding-top: 10%;
+    transition: width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Toggle Button */
+#modeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
     color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode #modeToggle {
+    background-color: #ffffff;
+    color: #ffd700;
+}
+
+body.light-mode #modeToggle {
+    background-color: #000000;
+    color: #333;
+}
+
+/* Adjust other elements for light mode */
+body.light-mode .search-box input {
+    border: 3px solid #33ff00;
+}
+
+body.light-mode .search-box button {
+    background-color: #0dff00;
+    color: #ffffff;
+}
+body.light-mode .sidebar ul li a.active{
+ background-color: #00fff2;
+ color: #0004ff;
+}
+
+body.light-mode .menu-icon {
+    filter: invert(1);
 }
 
 /* Container for layout */
@@ -22,7 +95,7 @@ body {
 /* Sidebar styling */
 .sidebar {
     background-color: #0074D9; /* Blue color */
-    width: 120px; /* Collapsed width */
+    width: 150px; /* Collapsed width */
     height: 100%;
     padding-top: 20px;
     color: #ffffff;
@@ -31,25 +104,26 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-     justify-content: center; /*Center menu items vertically */
+    justify-content: center; /*Center menu items vertically */
     position: relative;
 }
 
 .sidebar:hover {
-    width: 350px; /* Expanded width on hover */
+    width: 400px; /* Expanded width on hover */
 }
 
 /* Logo styling - always visible */
 .logo {
     width: 100px;
     height: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .logo img {
     width: 100%;
     height: auto;
 }
+
 
 /* Search box styling */
 .search-box {
@@ -126,7 +200,7 @@ body {
 } 
 
 .sidebar:hover ul li {
-    justify-content: center; /* Center items when sidebar is expanded */
+    justify-content: flex-start; /* Center items when sidebar is expanded */
     padding-left: 120px;
 }
 
@@ -136,7 +210,8 @@ body {
     font-size: 18px;
     display: flex;
     align-items: center;
-    width: 100%;
+    height: 150%;
+    width: 55%;
     padding-left: 20px; /* Left padding to space out from sidebar edge */
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
@@ -151,6 +226,8 @@ body {
 .sidebar ul li a span {
     opacity: 0; /* Hidden by default */
     transition: opacity 0.3s ease;
+    flex: 1;
+    text-align: left; /* Center-align text */
     padding-left: 20px;
     transition: transform 0.3s ease; /* Smooth transition for icon */
 }
@@ -170,6 +247,15 @@ body {
     flex-grow: 1;
     padding: 40px;
 }
+
+/* Add a new class for the active menu item background color */
+.sidebar ul li a.active {
+    background-color: #ffff00; /* Yellow background for active menu item */
+    color: #000000; /* Dark text for better readability on yellow */
+    border-radius: 5px; /* Optional: Add rounded corners to highlight */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
 
 .page {
     display: none; /* Hide all pages by default */
