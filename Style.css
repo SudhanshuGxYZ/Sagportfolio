@@ -7,93 +7,32 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: rgb(255, 208, 0);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:  0.3s ease, color 0.3s ease;
+    height: 100%;
+    width: 100%;
 }
 
-/* Light and dark mode background colors */
-body.light-mode {
-    background-color: rgb(0, 0, 0);
-    color: cyan;
-}
 
-body.light-mode .sidebar {
-    background-color: rgb(76, 76, 76);
-    color: yellow ;
-}
 
-body.light-mode .sidebar ul li a {
-    color: rgb(0, 255, 0);
-}
 
-body.light-mode .sidebar ul li a:hover {
-    color: yellow;
-}
 
-/* Sidebar colors */
-.sidebar {
-    background-color: #0074D9;
-    width: 150px;
-    padding-top: 10%;
-    transition: width 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
 
 /* Toggle Button */
 #modeToggle {
     position: fixed;
-    top: 30px;
+    top: 10px;
     right: 30px;
     padding: 10px;
-    background-color: #ffd700;
-    border: solid #0074D9;
-    border-radius: 5px;
+    border:none;
     cursor: pointer;
-    font-size: 18px;
-    color: #ffffff;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 25px;
+    transition: all 0.3s ease; /*Smooth transition */
 }
 
-body.dark-mode #modeToggle {
-    background-color: #ffffff;
-    color: #ffd700;
-}
 
-body.light-mode #modeToggle {
-    background-color: #000000;
-    color: #333;
-    border-color: #00ff00;
-}
 
-/* Adjust other elements for light mode */
-body.light-mode .search-box input {
-    border: 3px solid #33ff00;
-}
 
-body.light-mode .search-box button {
-    background-color: #0dff00;
-    color: #ffffff;
-}
-body.light-mode .sidebar ul li a.active{
- background-color: #00c9d3;
- color: #0004ff;
-}
 
-body.dark-mode .sidebar ul li a.active{
-    border-color: #ffffff;
-}
-
-body.light-mode .sidebar ul li a.active{
-   border-color: #00ff00;
-}
-
-body.light-mode .menu-icon {
-    filter: invert(1);
-}
 
 /* Container for layout */
 .container {
@@ -102,13 +41,16 @@ body.light-mode .menu-icon {
     overflow: hidden;
 }
 
+
+
+
+
+
 /* Sidebar styling */
 .sidebar {
-    background-color: #0074D9; /* Blue color */
     width: 150px; /* Collapsed width */
     height: 100%;
     padding-top: 20px;
-    color: #ffffff;
     overflow: hidden;
     transition: width 0.3s ease; /* Smooth transition */
     display: flex;
@@ -122,7 +64,8 @@ body.light-mode .menu-icon {
     width: 400px; /* Expanded width on hover */
 }
 
-/* Logo styling - always visible */
+
+/* sidebar Logo styling - always visible */
 .logo {
     width: 100px;
     height: 100px;
@@ -155,24 +98,16 @@ body.light-mode .menu-icon {
     padding: 5px;
     font-size: 16px;
     border-radius: 4px;
-    border: 3px solid #ffee00; /* Darker yellow shade */
     width: 100%;
 }
 
 .search-box button {
     padding: 5px;
-    background-color: #ffd700; /* Yellow color for the button */
-    color:#ffffff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
-}
-
-/* Optional: add hover effect to button */
-.search-box button:hover {
-    background-color: #e6c200; /* Slightly darker yellow on hover */
 }
 
 
@@ -189,7 +124,6 @@ body.light-mode .menu-icon {
     height: 100%;
     padding-left: 20px;
     transition: all 0.3s ease; /* Smooth transition */
-    
 }
 
 .sidebar:hover ul {
@@ -215,7 +149,6 @@ body.light-mode .menu-icon {
 }
 
 .sidebar ul li a {
-    color: #00ff00; /* Green color for menu items */
     text-decoration: none;
     font-size: 18px;
     display: flex;
@@ -247,31 +180,489 @@ body.light-mode .menu-icon {
 }
 
 .sidebar ul li a:hover {
-    color: #FFFF00; /* Yellow color on hover */
     text-decoration: underline;
     transform: translateX(20px); /* Move icon and text together */
 }
 
 /* Main content styling */
 .main-content {
-    flex-grow: 1;
-    padding: 40px;
+    flex-grow: 100px;
+    padding: 30px;
+    max-width: 1500px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 /* Add a new class for the active menu item background color */
 .sidebar ul li a.active {
-    background-color: #ffff00; /* Yellow background for active menu item */
-    color: #000000; /* Dark text for better readability on yellow */
     border:solid;
     border-radius: 5px; /* Optional: Add rounded corners to highlight */
     transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-
 .page {
     display: none; /* Hide all pages by default */
+    padding-top: 90px;
 }
 
 .page.active {
     display: block; /* Show only the active page */
 }
+
+
+
+
+
+/* Date and Time Display */
+.date-time {
+    position: absolute;
+    color: orange;
+    font-size: 1rem;
+    opacity: 0.9;
+    z-index: 10; /* Ensure it stays on top */
+}
+  
+.date-time .time, .date-time .date {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+  
+.date-time .icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+
+
+
+
+/* home page styling */
+.intro {
+    display: inline-flex;
+    max-width: 1400px;
+    text-align: left; /* Left-aligns all text */
+    padding-top: 90px;
+}
+
+.welcome {
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+.hello {
+    font-size: 2rem;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 4rem;
+    border-bottom: 4px solid;
+    display: inline-block;
+}
+
+.desc h1{
+    text-align: left;
+}
+
+.description {
+    font-size: 1rem;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.download-btn {
+    display: inline-block;
+    margin: 20px auto 0; /* Centers the button below the description */
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.center-btn {
+    text-align: center; /* Centers only the button */
+}
+
+.profile-pic img {
+    width: 300px;
+    height: 450px;
+    border: 3px solid;
+    margin: auto 0;
+    padding: auto 0;
+
+}
+.desc{
+    margin-right: 20px;
+}
+
+.links .icons{
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    margin-right: 20px;
+}
+
+.links{
+    display: flex; /* Add flexbox layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-top: 30px;
+}
+
+
+
+
+
+ /* About section */
+
+.all {
+    height: 78vh; /* Adjust this height as needed */
+    overflow-y: auto; /* Adds a vertical scrollbar if content overflows */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    padding-top: 2vh;
+    padding-bottom: 10vh;
+}
+
+.descriptio, .personal-info, .education {
+    margin: 20px;
+}
+
+h1{
+    font-size: 50px;
+    text-decoration: underline 3px;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+/* Personal Info Styling */
+.personal-info ul {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to next line if needed */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    gap: 20px; /* Add space between items */
+}
+
+.personal-info ul li {
+    flex: 1 1 calc(50% - 20px); /* Items take up 50% width minus the gap */
+    box-sizing: border-box; /* Ensure padding doesn’t affect width */
+    display: inline-block;
+}
+
+
+/* Education Section */
+.education {
+    margin-top: 30px;
+}
+
+/* Timeline Design */
+.education-timeline {
+    position: relative;
+    margin-left: 30px; /* Space for the line */
+    border-left: 3px solid; /* Vertical timeline line */
+    padding-left: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item .circle {
+    position: absolute;
+    top: 0;
+    left: -30px; /* Align the circle with the line */
+    width: 20px;
+    height: 20px;
+    border: 3px solid ;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item .sc {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #333;
+}
+
+.timeline-item .sc h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.timeline-item .sc p {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+
+
+
+/* Skills Section*/
+
+#skill{
+    height: max-content;
+}
+
+#Skills .abc{
+    height: 660px; /* Adjust this height as needed */
+    overflow-y: auto; /* Adds a vertical scrollbar if content overflows */
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    padding-bottom: 50px;
+}
+
+
+.section-content {
+    text-align: center;
+    display: inline-flex;
+    flex-wrap: wrap; /* Wrap items to next line if needed */
+    z-index: 1;
+    height: max-content; /* Adjust this height as needed */
+    overflow-y: auto; /* Adds a vertical scrollbar if content overflows */
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    justify-content: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.skill {
+    margin: 30px 30px;
+    height: 170px;
+    padding: 30px 50px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.skill-description {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    }
+
+.experience-timeline {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.experience-item {
+    margin: 25px 0;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateX(20px);
+}
+
+.experience-item h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.experience-item p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.experience-description {
+    font-style: italic;
+}
+
+.exp{
+    margin-top: 40px;
+}
+ 
+
+
+ 
+  /* Project section */
+
+    .projects {
+    padding: auto;
+    margin: 0px;
+    flex-wrap: wrap;
+    max-height: 650px;
+    text-align: center;
+    overflow-y: auto; /* Adds a vertical scrollbar if content overflows */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.project-box {
+    display: inline-flex;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin: 30px;
+}
+
+.project-box:hover {
+    transform: scale(1.05);
+}
+
+.project-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.project-box:hover .project-info {
+    opacity: 1;
+}
+
+.project-box h3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-info a {
+    text-decoration: underline ;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.project-info a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* Contact Section */
+
+.contacts{
+    display: inline;
+}
+
+.contact-section {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 50px;
+  }
+  
+  .contact-info {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info h2 {
+    margin-bottom: 15px;
+  }
+  
+  .contact-info p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .contact-info .info p {
+    margin: 5px 0;
+  }
+  
+  .contact-form {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form h3 {
+    margin-bottom: 15px;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid ;
+    border-radius: 5px;
+  }
+  
+  .contact-form textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .contact-form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .info a{
+    cursor: pointer;
+  }
+
+
+  
