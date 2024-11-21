@@ -1,0 +1,293 @@
+/* Colors are defined here */
+
+/* body */
+
+body.light-mode 
+{
+    background: linear-gradient(to right, rgb(255, 255, 255), skyblue);
+}
+
+body.dark-mode 
+{
+    background: linear-gradient(to right, rgb(49, 49, 49), rgb(0, 0, 0));
+}
+
+
+
+
+/* icons color inversion */
+
+body.dark-mode .menu-icon {
+    filter: invert(1);
+}
+
+body.dark-mode .icon {
+    filter: invert(1);
+}
+
+body.dark-mode #G {
+    filter: invert(1);
+}
+
+
+
+
+/* sidebar */
+
+body.light-mode .sidebar 
+{
+    background-color: rgb(0, 123, 255);
+}
+body.dark-mode .sidebar 
+{
+    background-color: rgb(0, 0, 0);
+}
+
+body.light-mode .sidebar ul li a 
+{
+    color: rgb(255, 255, 255);
+}
+body.dark-mode .sidebar ul li a 
+{
+    color: rgb(0, 255, 0);
+}
+
+body.light-mode .sidebar ul li a:hover 
+{
+    color:yellow;
+}
+body.dark-mode .sidebar ul li a:hover 
+{
+    color: cyan;
+}
+
+body.dark-mode #modeToggle {
+    background-color: rgb(0, 0, 0);
+}
+
+body.light-mode #modeToggle {
+    background-color:skyblue;
+}
+
+body.light-mode .search-box input {
+    background-color:  skyblue;
+    border: 3px solid rgb(255, 230, 0);
+}
+body.dark-mode .search-box input {
+    background-color: rgb(49, 49, 49);
+    border: 3px solid cyan;
+}
+
+body.light-mode .search-box button {
+    background-color: yellow;
+}
+body.dark-mode .search-box button {
+    background-color: cyan;
+}
+
+body.light-mode .search-box button:hover {
+    background-color: orange; /* Slightly darker yellow on hover */
+}
+body.dark-mode .search-box button:hover {
+    background-color: rgb(0, 255, 0); /* Slightly darker yellow on hover */
+}
+
+body.light-mode .sidebar ul li a.active{
+ background: linear-gradient(to right, rgb(255, 255, 255), skyblue);
+ color: darkblue;
+ border-color: yellow;
+ 
+}
+body.dark-mode .sidebar ul li a.active{
+    background: linear-gradient(to right, rgb(49, 49, 49), rgb(0, 0, 0));
+    color: orange;
+    border-color: cyan;
+}
+
+
+
+
+/* home page */
+
+body.light-mode .welcome{
+    color: rgb(0, 123, 255);
+}
+
+body.light-mode .hello{
+    color: rgb(0, 123, 255);
+}
+
+body.light-mode .description{
+    color: rgb(0, 123, 255);
+}
+
+body.dark-mode .welcome, .hello, .description{
+    color: cyan;
+}
+
+.name{
+    color: red;
+}
+
+body.light-mode .name{
+    border-bottom-color: blue;
+}
+
+body.dark-mode .name{
+    border-bottom-color: cyan;
+}
+
+.download-btn{
+    background-color: #e30613;
+    color: #ffffff;
+}
+
+.download-btn:hover {
+    background-color: #5a0006;
+}
+
+.profile-pic img{
+    border-color: #e30613
+}
+
+
+
+
+/* about section */
+
+h1{
+    text-decoration-color: red;
+}
+
+body.light-mode h1{
+    color: blue;
+}
+
+body.dark-mode h1{
+    color: cyan;
+}
+
+h2{
+    color: red;
+}
+
+body.light-mode h2{
+    text-decoration-color: blue;
+}
+
+body.dark-mode h2{
+    text-decoration-color: cyan;
+}
+
+body.light-mode li{
+    color: blue;
+}
+body.dark-mode li{
+    color: cyan;
+}
+
+body.light-mode li strong{
+    color: rgb(0, 0, 0);
+}
+body.dark-mode li strong{
+    color: orange;
+}
+
+.education-timeline {
+    border-color: orange;
+}
+
+.timeline-item .circle{
+    background-color: #007bff;
+    border-color: rgb(0, 0, 0);
+}
+
+.timeline-item .sc {
+    background: linear-gradient(45deg, #4ecca3, #1a73e8);
+}
+
+.timeline-item .sc h3{
+    color: black;
+}
+
+.timeline-item .sc{
+    color: black;
+}
+
+.education-timeline .timeline-item:last-child .circle {
+    background-color: #28a745; /* Different color for the destination */
+}
+
+
+
+
+
+/* Skills Section */
+
+.skill {
+    background: linear-gradient(45deg, #ff6b6b, #f7a440);
+    color: white;
+}
+
+.skill-description{
+    color: white
+}
+
+.experience-timeline{
+    color: white;
+}
+
+.experience-item{
+    background: linear-gradient(45deg, #4ecca3, #1a73e8);
+}
+
+
+
+
+/* project section */
+
+.project-box {
+    background: linear-gradient(to right, #007bff, #fde663);
+    border: 1px solid #2b00ff;
+}
+
+.project-info{
+    background: linear-gradient(to right, #5641f2, #ffd500);
+    color: white;
+}
+
+.project-box h3 {
+    color: #000dff;
+}
+
+.project-info a {
+    text-decoration-color: black;
+    color: #000000;
+}
+
+
+
+
+/* conatct section */
+
+.contact-info{
+     background: linear-gradient(45deg, #4ecca3, #1a73e8);
+}
+
+.contact-form {
+     background: linear-gradient(45deg, #4ecca3, #1a73e8);
+}
+
+.contact-form input,
+  .contact-form textarea {
+    border-color: white
+  }
+
+  .contact-form button {
+    background-color: #28a745;
+    color: white;
+  }
+
+  .contact-form button:hover {
+    background-color: #218838;
+  }

@@ -1,0 +1,721 @@
+/* Media Queries */
+
+/* Extra Small Devices (up to 480px) */
+@media (max-width: 480px) {
+/* for main */
+    .main-content {
+        width: 100%;
+        padding: 15px;
+    }
+
+/* for sidebar */
+    .sidebar {
+        width: 80px; /* Collapsed width */
+    }
+
+    .sidebar:hover {
+        width: 250px; /* Expanded width */
+    }
+
+    .sidebar ul li {
+        margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+        font-size: 16px;
+        width: 70%;
+    }
+
+    .search-box {
+        margin-top: 10px;
+    }
+
+/* for toggle button */
+    #modeToggle {
+        top: 5px;
+        right: 15px;
+        padding: 8px;
+        font-size: 20px;
+    }
+
+/* for date-time */
+    .date-time {
+        font-size: 0.8rem;
+    }
+
+    .date-time .icon {
+        width: 14px;
+        height: 14px;
+    }
+
+/* for home Page */
+    .welcome {
+        font-size: 2.5rem;
+    }
+    .hello {
+        font-size: 1rem;
+    }
+    .name {
+        font-size: 2.5rem;
+    }
+    .description {
+        font-size: 0.8rem;
+    }
+    .profile-pic img {
+        width: 150px;
+        height: 225px;
+    }
+    .links .icons {
+        width: 30px;
+        height: 30px;
+    }
+
+/* for about section */
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .personal-info ul li {
+        flex: 1 1 100%; /* Items take full width */
+    }
+
+    .timeline-item .sc {
+        font-size: 0.9rem;
+    }
+
+/* for skill section */
+    .section-title {
+        font-size: 2rem;
+    }
+    .skill {
+        width: 200px;
+        padding: 20px 30px;
+        font-size: 1.2rem;
+    }
+    .skill h3 {
+        font-size: 1.5rem;
+    }
+    .experience-item h3 {
+        font-size: 1.5rem;
+    }
+    .experience-item p {
+        font-size: 0.9rem;
+    }
+
+/* Project section */
+    .project-box {
+        width: 100%;
+        height: 150px;
+        margin: 15px 0;
+    }
+    .projects {
+        max-height: 500px;
+    }
+
+/* contact section */
+    .contact-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-info, .contact-form {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .contact-info h2, .contact-form h3 {
+        font-size: 18px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 8px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+/* Small Devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+/* for main */
+    .main-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+/* for sidebar */
+    .sidebar {
+        width: 120px; /* Collapsed width */
+    }
+
+    .sidebar:hover {
+        width: 300px; /* Expanded width */
+    }
+
+    .sidebar ul li {
+        margin: 18px 0;
+    }
+
+    .sidebar ul li a {
+        font-size: 17px;
+        width: 65%;
+    }
+
+    .search-box {
+        margin-top: 15px;
+    }
+
+/* for toggle button */
+    #modeToggle {
+        top: 8px;
+        right: 20px;
+        padding: 9px;
+        font-size: 22px;
+    }
+
+/* for date-time */
+    .date-time {
+        font-size: 0.9rem;
+    }
+
+    .date-time .icon {
+        width: 16px;
+        height: 16px;
+    }
+
+/* for home Page  */
+    .welcome {
+        font-size: 3rem;
+    }
+    .hello {
+        font-size: 1.5rem;
+    }
+    .name {
+        font-size: 3rem;
+    }
+    .description {
+        font-size: 0.9rem;
+    }
+    .profile-pic img {
+        width: 200px;
+        height: 300px;
+    }
+    .links .icons {
+        width: 34px;
+        height: 34px;
+    }
+
+/* for about section */
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .personal-info ul li {
+        flex: 1 1 calc(100% - 20px); /* Items stack vertically */
+    }
+
+    .timeline-item .sc {
+        font-size: 1rem;
+    }
+
+/* for skill section */
+    .section-title {
+        font-size: 2.5rem;
+    }
+    .skill {
+        width: 220px;
+        padding: 25px 40px;
+        font-size: 1.4rem;
+    }
+    .skill h3 {
+        font-size: 1.8rem;
+    }
+    .experience-item h3 {
+        font-size: 1.8rem;
+    }
+    .experience-item p {
+        font-size: 1rem;
+    }
+
+/* for Project section */
+     .project-box {
+        width: 45%;
+        height: 180px;
+        margin: 20px;
+    }
+    .projects {
+        max-height: 600px;
+    }
+
+/* for contact section */
+    .contact-section {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .contact-info, .contact-form {
+        margin: 15px 0;
+        padding: 20px;
+    }
+
+    .contact-info h2, .contact-form h3 {
+        font-size: 20px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 10px;
+    }
+
+    .contact-form button {
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+/* Medium Devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+/* for main */
+    .main-content {
+        width: 85%;
+        padding: 25px;
+    }
+
+/* for sidebar */
+    .sidebar {
+        width: 150px; /* Collapsed width */
+    }
+
+    .sidebar:hover {
+        width: 350px; /* Expanded width */
+    }
+
+    .sidebar ul li {
+        margin: 20px 0;
+    }
+
+    .sidebar ul li a {
+        font-size: 18px;
+        width: 60%;
+    }
+
+    .search-box {
+        margin-top: 20px;
+    }
+
+/* for toggle button */
+    #modeToggle {
+        top: 10px;
+        right: 25px;
+        padding: 10px;
+        font-size: 24px;
+    }
+
+/* for date-time */
+    .date-time {
+        font-size: 1rem;
+    }
+
+    .date-time .icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+
+/* for home Page */
+    .welcome {
+        font-size: 4rem;
+    }
+    .hello {
+        font-size: 1.8rem;
+    }
+    .name {
+        font-size: 3.5rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+    .profile-pic img {
+        width: 250px;
+        height: 375px;
+    }
+    .links .icons {
+        width: 36px;
+        height: 36px;
+    }
+
+/* for about section */
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .personal-info ul li {
+        flex: 1 1 calc(50% - 10px); /* Adjust gap */
+    }
+
+    .timeline-item .sc {
+        font-size: 1rem;
+    }
+
+/* for skill section */
+    .section-title {
+        font-size: 3rem;
+    }
+    .skill {
+        width: 240px;
+        padding: 30px 45px;
+        font-size: 1.5rem;
+    }
+    .skill h3 {
+        font-size: 2rem;
+    }
+    .experience-item h3 {
+        font-size: 2rem;
+    }
+    .experience-item p {
+        font-size: 1rem;
+    }
+
+/* for Project section */
+    .project-box {
+        width: 40%;
+        height: 200px;
+        margin: 25px;
+    }
+    .projects {
+        max-height: 650px;
+    }
+
+/* for contact section */
+    .contact-section {
+        padding: 40px;
+    }
+
+    .contact-info, .contact-form {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .contact-info h2, .contact-form h3 {
+        font-size: 22px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 12px;
+    }
+
+    .contact-form button {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+/* Large Devices (1025px to 1400px) */
+@media (min-width: 1025px) and (max-width: 1400px) {
+/* for main */
+    .main-content {
+        width: 80%;
+        padding: 30px;
+    }
+
+/* for sidebar */
+    .sidebar {
+        width: 180px; /* Collapsed width */
+    }
+
+    .sidebar:hover {
+        width: 400px; /* Expanded width */
+    }
+
+    .sidebar ul li {
+        margin: 22px 0;
+    }
+
+    .sidebar ul li a {
+        font-size: 19px;
+        width: 55%;
+    }
+
+    .search-box {
+        margin-top: 25px;
+    }
+
+/* for toggle button */
+    #modeToggle {
+        top: 10px;
+        right: 30px;
+        padding: 10px;
+        font-size: 25px;
+    }
+
+/* for date-time */
+    .date-time {
+        font-size: 1.2rem;
+    }
+
+    .date-time .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+/* for home Page */
+    .welcome {
+        font-size: 4.5rem;
+    }
+    .hello {
+        font-size: 2rem;
+    }
+    .name {
+        font-size: 3.8rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+    .profile-pic img {
+        width: 280px;
+        height: 420px;
+    }
+    .links .icons {
+        width: 37px;
+        height: 37px;
+    }
+
+/* for about section */
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .personal-info ul li {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .timeline-item .sc {
+        font-size: 1.1rem;
+    }
+
+/* for skill section */
+    .section-title {
+        font-size: 3.5rem;
+    }
+    .skill {
+        width: 260px;
+        padding: 30px 50px;
+        font-size: 1.6rem;
+    }
+    .skill h3 {
+        font-size: 2.2rem;
+    }
+    .experience-item h3 {
+        font-size: 2.2rem;
+    }
+    .experience-item p {
+        font-size: 1.1rem;
+    }
+
+/* Project section */
+    .project-box {
+        width: 30%;
+        height: 220px;
+        margin: 30px;
+    }
+    .projects {
+        max-height: 700px;
+    }
+
+/* for contact section */
+    .contact-section {
+        padding: 50px;
+    }
+
+    .contact-info, .contact-form {
+        margin: 20px;
+        padding: 30px;
+    }
+
+    .contact-info h2, .contact-form h3 {
+        font-size: 24px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 14px;
+    }
+
+    .contact-form button {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+/* Extra Large Devices (larger than 1400px) */
+@media (min-width: 1025px) and (max-width: 1400px) {
+/* for main */
+    .main-content {
+        width: 75%;
+        padding: 40px;
+    }
+
+/* for sidebar */
+    .sidebar {
+        width: 200px; /* Collapsed width */
+    }
+
+    .sidebar:hover {
+        width: 450px; /* Expanded width */
+    }
+
+    .sidebar ul li {
+        margin: 25px 0;
+    }
+
+    .sidebar ul li a {
+        font-size: 20px;
+        width: 50%;
+    }
+
+    .search-box {
+        margin-top: 30px;
+    }
+
+
+/* for toggle button */
+    #modeToggle {
+        top: 10px;
+        right: 40px;
+        padding: 12px;
+        font-size: 30px;
+    }
+
+/* for date-time */
+    .date-time {
+        font-size: 1.5rem;
+    }
+
+    .date-time .icon {
+        width: 24px;
+        height: 24px;
+    }
+
+/* for home Page */
+    .welcome {
+        font-size: 6rem;
+    }
+    .hello {
+        font-size: 2.5rem;
+    }
+    .name {
+        font-size: 5rem;
+    }
+    .description {
+        font-size: 1.2rem;
+    }
+    .profile-pic img {
+        width: 350px;
+        height: 525px;
+    }
+    .links .icons {
+        width: 40px;
+        height: 40px;
+    }
+    .intro {
+        padding-top: 100px;
+        max-width: 1600px;
+    }
+
+/* for about section */
+    h1 {
+        font-size: 55px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .personal-info ul li {
+        flex: 1 1 calc(33% - 20px); /* Allow for three items per row */
+    }
+
+    .timeline-item .sc {
+        font-size: 1.2rem;
+        padding: 20px; /* Slightly larger padding */
+    }
+
+/* for skill section */
+     .section-title {
+        font-size: 4rem;
+    }
+    .skill {
+        width: 280px;
+        padding: 35px 60px;
+        font-size: 1.8rem;
+    }
+    .skill h3 {
+        font-size: 2.5rem;
+    }
+    .experience-item h3 {
+        font-size: 2.5rem;
+    }
+    .experience-item p {
+        font-size: 1.2rem;
+    }
+    
+/* for Project section */
+    .project-box {
+        width: 25%;
+        height: 240px;
+        margin: 35px;
+    }
+    .projects {
+        max-height: 750px;
+    }
+
+/* for contact section */
+.contact-section {
+    padding: 60px;
+}
+
+.contact-info, .contact-form {
+    margin: 25px;
+    padding: 35px;
+}
+
+.contact-info h2, .contact-form h3 {
+    font-size: 26px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 16px;
+}
+
+.contact-form button {
+    font-size: 20px;
+}
+}
