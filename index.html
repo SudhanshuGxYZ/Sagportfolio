@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sliding Sidebar with Dynamic Pages</title>
+    <title>Sag Portfolio</title>
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 <body>
-        <!-- Dark/Light mode toggle button -->
-    <button id="modeToggle" onclick="toggleMode()">🌞</button>
+        
 
     <div class="container">
         <!-- Sidebar -->
@@ -23,34 +24,258 @@
             <ul>
                 <li><a href="#" onclick="showPage('home')"><img src="icons/home.png" alt="Home Icon" class="menu-icon"><span>Home</span></a></li>
                 <li><a href="#" onclick="showPage('about')"><img src="icons/about.png" alt="About Icon" class="menu-icon"><span>About</span></a></li>
-                <li><a href="#" onclick="showPage('skills')"><img src="icons/skills.png" alt="Skills Icon" class="menu-icon"><span>Skills</span></a></li>
+                <li><a href="#" onclick="showPage('Skills')"><img src="icons/skills.png" alt="Skills Icon" class="menu-icon"><span>Skills</span></a></li>
                 <li><a href="#" onclick="showPage('projects')"><img src="icons/projects.png" alt="Projects Icon" class="menu-icon"><span>Projects</span></a></li>
-                <li><a href="#" onclick="showPage('contacts')"><img src="icons/contacts.png" alt="Contacts Icon" class="menu-icon"><span>Contact</span></a></li>
+                <li><a href="#" onclick="showPage('contacts')"><img src="icons/contacts.png" alt="Contacts Icon" class="menu-icon"><span>Contacts</span></a></li>
             </ul>
         </nav>
 
         <!-- Main content area -->
+        <!-- Dark/Light mode toggle button -->
+        <button id="modeToggle" onclick="toggleMode()">🌞</button>
+         
         <div class="main-content">
-            <section id="home" class="page active">
-                <h1>Welcome</h1>
-                <p>Hello, I am</p>
-                <h3>Sudhanhsu Anil</h3>
+            <div>
+            <!-- Live Date and Time Display -->
+            <div class="date-time">
+                <div class="time" id="time">
+                    <img src="icons/clock.png" alt="Clock Icon" class="icon"> <span id="timeText"></span>
+                </div>
+                <div class="date" id="date">
+                    <img src="icons/date.png" alt="Calendar Icon" class="icon"> <span id="dateText"></span>
+                </div>
+            </div>
+            </div>
+
+            <section id="home" class="page">
+                <div class="intro">
+                    <div class="desc">
+                        <h7><span class="welcome">Welcome</span></h7>
+                        <p><span class="hello">Hello, I am</span></p>
+                        <h1><span class="name"> Sudhanshu Gotefode </span></h1>
+                        <p class="description">
+                            Enthusiastic and motivated recent graduate with a strong foundation in computer science. <br>
+                            Skilled in problem-solving, teamwork, creativity, with hands-on building user-centered applications with a modern design and also eager to contribute fresh ideas, constantly learning and adapting to new trends.
+                            <br>
+                            <br>
+                            <br>
+                        </p>
+                        <div class="center-btn">
+                            <a href="documents/My resume .pdf" class="download-btn" download>Download CV</a>
+                        </div>
+                        <div class="links">
+                            <a href="https://github.com/13sudhanshu" target="_blank"><img src="icons/github.png" alt="github Icon" class="icons" id="G" ></a> 
+                            <a href="https://www.linkedin.com/in/sudhanshu-gotefode-6a65b321b" target="_blank"><img src="icons/linkedin.png" alt="linkedin Icon" class="icons" ></a> 
+                            <a href="https://www.instagram.com/sudhanshu.a.g/" target="_blank"><img src="icons/instagram.png" alt="instagram Icon" class="icons" ></a> 
+                            <a href="https://www.facebook.com/share/nAbWdT7PFZJtnfp1/" target="_blank"><img src="icons/facebook.png" alt="facebook Icon" class="icons" ></a> 
+                        </div>
+                    </div>
+                    <div class="profile-pic">
+                        <img src="Images/My_profile_photo.JPG" alt="My_profile_photo">
+                    </div>
+                </div>
             </section>
+
             <section id="about" class="page">
-                <h1>About Page</h1>
-                <p>Learn more about us on this page.</p>
+                <!-- Description Section -->
+                <h1>About Me</h1>
+              <div class="all">
+                <div class="description">
+                    <p>
+                        Hi! <br>
+                        I'm Sudhanshu Anil Gotefode, a passionate individual who always try to learn new things. I mainly come from descent bacground but i always tries to explore different things to gain new experience.....
+                    </p>
+                </div>
+
+                <!-- Personal Information Section -->
+                <div class="personal-info">
+                    <h2>Personal Information</h2>
+                    <ul>
+                        <li><strong>Full Name :</strong> Sudhanshu Anil Gotefode </li>
+                        <li><strong>Age :</strong> 22 </li>
+                        <li><strong>Birthdate :</strong> 13-11-2002 </li>
+                        <li><strong>Qualification :</strong> B.E.(Computer Science)</li>
+                        <li><strong>Phone :</strong> +91-7498376550</li>
+                        <li><strong>Email :</strong> sudhanshuanilgotefode@gmail.com </li>
+                        <li><strong>Location :</strong> Chakan, Pune, Maharashtra, India </li>
+                        <li><strong>Languages :</strong> English, Hindi, Marathi </li>
+                        <li><strong>Hobbies :</strong> Traveling, Photography, Cycling and Playing chess, batminton, cricket </li>
+                    </ul>
+                </div>
+
+                <!-- Education Details Section -->
+                <div class="education">
+                    <h2>Education</h2>
+                    <div class="education-timeline">
+                        <!-- Education 1 -->
+                        <div class="timeline-item">
+                            <div class="circle"></div>
+                            <div class="sc">
+                                <h3>Bachelor of Engineering in Computer Science [Honors in Cyber Security]</h3>
+                                <p>SKN Sinhgad Institute of Technology and Science [Savitribaiphule University, Pune]</p>
+                                <p><strong>Graduated:</strong> [2024] with 7.44 CGPA</p>
+                                <p>Focused on programming, problem-solving, and project-based learning.</p>
+                            </div>
+                        </div>
+
+                        <!-- Education 2 -->
+                        <div class="timeline-item">
+                            <div class="circle"></div>
+                            <div class="sc">
+                                <h3>Jr.College (PCM+IT) [12th]</h3>
+                                <p>Mahatma Gandhi Jr.College [Savitribaiphule University, Pune]</p>
+                                <p><strong>Graduated:</strong> [2020] with 75.69 %</p>
+                                <p>Specialized in science and mathematics.</p>
+                            </div>
+                        </div>
+
+                        <!-- Education 3 -->
+                        <div class="timeline-item">
+                            <div class="circle"></div>
+                            <div class="sc">
+                                <h3>High School [10th]</h3>
+                                <p>VidyaNiketan English Medium School [Savitribaiphule University, Pune]</p>
+                                <p><strong>Graduated:</strong>[2018] with 83.8 %</p>
+                                <p>Learn various subjects such as reading, writing, mathematics, science, social studies, and languages, with an emphasis on developing essential skills, knowledge, and values to become well-rounded, productive citizens.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
             </section>
-            <section id="skills" class="page">
-                <h1>Skills Page</h1>
-                <p>Explore our skills here.</p>
+
+            <section id="Skills" class="page">
+                <div class="abc">
+                <h1 class="section-title">Skills</h1>
+                <div class="section-content">
+                    <div class="skill">
+                        <h3>HTML</h3>
+                        <p class="skill-description">Creating structured and semantic web content.</p>
+                    </div>
+                    <div class="skill">
+                        <h3>CSS</h3>
+                        <p class="skill-description">Styling and laying out websites with modern techniques.</p>
+                    </div>
+                    <div class="skill">
+                        <h3>JavaScript</h3>
+                        <p class="skill-description">Building interactive and dynamic web pages.</p>
+                    </div>
+                    <div class="skill">
+                        <h3>SQL</h3>
+                        <p class="skill-description">Developing fast, interactive UIs with React framework.</p>
+                    </div>
+                    <div class="skill">
+                        <h3>Java</h3>
+                        <p class="skill-description">Building Object-oriented & platform-independent code </p>
+                    </div>
+                    <div class="skill">
+                        <h3>APITesting</h3>
+                        <p class="skill-description">Testing the api's of applications using Postman.</p>
+                    </div>
+                </div>
+
+                <div class="exp">
+                <h1 class="section-title">Experience</h1>
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <h3>Tester (Internship)</h3>
+                        <p>FireFilnk crowd - 09/23 - 11/23</p>
+                        <p class="experience-description">Here testing different & newly build websites that can be
+                            launched and founded bugs into it, this bugs are founded
+                            according to different conditions and learn about building bug
+                            reports.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Web Developer (Internship)</h3>
+                        <p>Oasis Infobyte - 04/23 - 05/23</p>
+                        <p class="experience-description">Virtual Internship program where I learned to convert webpages into web application projects and done multiple
+                            projects using html, css and javascript and bootstraps</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Web Designer (Internship)</h3>
+                        <p>Internpe - 03/23 - 04/23</p>
+                        <p class="experience-description">Virtual internship program where I learn how to design the web
+                            pages and landing pages using html, css, javascript and
+                            bootstrap</p>
+                    </div>
+                </div>
+                </div>
+            </div>
             </section>
+
+
+
+            
             <section id="projects" class="page">
-                <h1>Projects Page</h1>
-                <p>Discover our projects on this page.</p>
+                <h1>My Projects </h1>
+                <div class="projects">
+                <!-- Example Project -->
+                <div class="project-box">
+                    <h3>To-Do-WebApp</h3>
+                    <div class="project-info">
+                        <a href=" https://13sudhanshu.github.io/To-do-webapp/" target="_blank">Go To -</a>
+                        <p>A user-friendly web application designed to help individuals or teams to manage and organize their tasks efficiently. </p>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <h3>Calculator</h3>
+                    <div class="project-info">
+                        <a href=" https://13sudhanshu.github.io/Calculator/" target="_blank">Go To -</a>
+                        <p>A basic calculator built using HTML and CSS, featuring a user-friendly interface with a display screen and numerical keypad.</p>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <h3>QR-Code-Generator</h3>
+                    <div class="project-info">
+                        <a href=" https://13sudhanshu.github.io/Qr-code-generator/" target="_blank">Go To -</a>
+                        <p> A application that provides a convenient way to create and share scannable codes, making it a uniqe way to share things.</p>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <h3>Weather App</h3>
+                    <div class="project-info">
+                        <a href=" https://13sudhanshu.github.io/Weather-app/" target="_blank">Go To -</a>
+                        <p>It provides a solid foundation for web development skills, showcasing HTML structure and CSS styling techniques.</p>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <h3>E-commerce-Website</h3>
+                    <div class="project-info">
+                        <a href=" https://13sudhanshu.github.io/Landing-Page/" target="_blank">Go To -</a>
+                        <p>A visually appealing online shopping website built using HTML and CSS, featuring a responsive design that adapts to various devices and screen sizes.</p>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <h3>Data Leakage Detection</h3>
+                    <div class="project-info">
+                        <a href=" https://13sudhanshu.github.io/Data-Leakage-detection/" target="_blank">Go To -</a>
+                        <p>(Final Year Project)<br>This is a system which helps to monitor, detect, and block unauthorised access,
+                            transmission or exfiltration of sensitive data.</p>
+                    </div>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
             </section>
+
             <section id="contacts" class="page">
-                <h1>Contacts Page</h1>
-                <p>Get in touch with us here.</p>
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Have a question or want to work together? Fill out the form below! and get in touch with me.</p>
+                    <div class="info">
+                      <p><strong>Email : </strong><a>sudhanshuanilgotefode@gmail.com</a></p>
+                      <p><strong>Phone : </strong>+91-7498376550</p>
+                      <p><strong>Address : </strong><a>Chakan,Pune,Maharashtra,India</a></p>
+                    </div>
+                  </div>
+                  <div class="contact-form">
+                    <h3>Message</h3>
+                    <form>
+                      <input type="text" name="name" placeholder="Your Name" required>
+                      <input type="email" name="email" placeholder="Email Address" required>
+                      <textarea name="message" placeholder="Type Message" required></textarea>
+                      <button type="submit">Send</button>
+                    </form>
+                  </div>
             </section>
         </div>
     </div>
@@ -58,3 +283,5 @@
     <script src="Script.js"></script>
 </body>
 </html>
+
+
