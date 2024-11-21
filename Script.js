@@ -29,12 +29,24 @@ function toggleMode() {
     // Toggle button icon based on mode
     const modeToggle = document.getElementById('modeToggle');
     if (document.body.classList.contains('light-mode')) {
-        modeToggle.textContent = '🌙'; // Moon icon for dark mode
+        modeToggle.textContent = '🌞'; // Moon icon for light mode
     } else {
-        modeToggle.textContent = '🌞'; // Sun icon for light mode
+        modeToggle.textContent = '🌙'; // Sun icon for dark mode
     }
 }
 
 // Set default mode to dark and show the home page initially
-document.body.classList.add('dark-mode');
+document.body.classList.add('light-mode');
 showPage('home'); // Initial page
+
+function updateDateTime() {
+    const now = new Date();
+    const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    
+    document.getElementById('timeText').textContent = now.toLocaleTimeString('en-US', timeOptions);
+    document.getElementById('dateText').textContent = now.toLocaleDateString('en-US', dateOptions);
+  }
+  setInterval(updateDateTime, 1000); // Update every second
+
+  
