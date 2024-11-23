@@ -20,7 +20,7 @@ The portfolio is a reflection of my passion for creating functional and aestheti
 
 #👉 🛠️ Tech Stack 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: (if applicable, add backend tools or frameworks used)
+- **Backend**: -
 - **Hosting**: GitHub Pages
 
 
