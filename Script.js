@@ -1,27 +1,4 @@
-// Script.js
-
-// Function to show the selected page and highlight the corresponding menu item
-function showPage(pageId) {
-    // Get all pages and hide them initially
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(page => {
-        page.classList.remove('active'); // Remove 'active' class from all pages
-    });
-
-    // Show the selected page by adding the 'active' class
-    document.getElementById(pageId).classList.add('active');
-
-    // Get all menu links and remove the 'active' class from each
-    const menuLinks = document.querySelectorAll('.sidebar ul li a');
-    menuLinks.forEach(link => {
-        link.classList.remove('active'); // Reset background for all menu items
-    });
-
-    // Add 'active' class to the clicked menu item
-    document.querySelector(`.sidebar ul li a[onclick="showPage('${pageId}')"]`).classList.add('active');
-}
-
-// Function to toggle between dark and light modes
+// Theme Toggle
 function toggleMode() {
     document.body.classList.toggle('light-mode');
     document.body.classList.toggle('dark-mode');
@@ -37,8 +14,8 @@ function toggleMode() {
 
 // Set default mode to dark and show the home page initially
 document.body.classList.add('light-mode');
-showPage('home'); // Initial page
 
+// DateTime Display
 function updateDateTime() {
     const now = new Date();
     const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
@@ -49,4 +26,21 @@ function updateDateTime() {
   }
   setInterval(updateDateTime, 1000); // Update every second
 
-  
+// Page Navigation
+const menuItems = document.querySelectorAll('.menu-item');
+const pages = document.querySelectorAll('.page');
+
+menuItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Remove active class from all menu items and pages
+        menuItems.forEach(i => i.classList.remove('active'));
+        pages.forEach(p => p.classList.remove('active'));
+        
+        // Add active class to clicked menu item and corresponding page
+        item.classList.add('active');
+        const pageId = item.getAttribute('data-page');
+        document.getElementById(pageId).classList.add('active');
+    });
+});
