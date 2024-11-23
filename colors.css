@@ -43,66 +43,7 @@ body.dark-mode .sidebar
     background-color: rgb(0, 0, 0);
 }
 
-body.light-mode .sidebar ul li a 
-{
-    color: rgb(255, 255, 255);
-}
-body.dark-mode .sidebar ul li a 
-{
-    color: rgb(0, 255, 0);
-}
 
-body.light-mode .sidebar ul li a:hover 
-{
-    color:yellow;
-}
-body.dark-mode .sidebar ul li a:hover 
-{
-    color: cyan;
-}
-
-body.dark-mode #modeToggle {
-    background-color: rgb(0, 0, 0);
-}
-
-body.light-mode #modeToggle {
-    background-color:skyblue;
-}
-
-body.light-mode .search-box input {
-    background-color:  skyblue;
-    border: 3px solid rgb(255, 230, 0);
-}
-body.dark-mode .search-box input {
-    background-color: rgb(49, 49, 49);
-    border: 3px solid cyan;
-}
-
-body.light-mode .search-box button {
-    background-color: yellow;
-}
-body.dark-mode .search-box button {
-    background-color: cyan;
-}
-
-body.light-mode .search-box button:hover {
-    background-color: orange; /* Slightly darker yellow on hover */
-}
-body.dark-mode .search-box button:hover {
-    background-color: rgb(0, 255, 0); /* Slightly darker yellow on hover */
-}
-
-body.light-mode .sidebar ul li a.active{
- background: linear-gradient(to right, rgb(255, 255, 255), skyblue);
- color: darkblue;
- border-color: yellow;
- 
-}
-body.dark-mode .sidebar ul li a.active{
-    background: linear-gradient(to right, rgb(49, 49, 49), rgb(0, 0, 0));
-    color: orange;
-    border-color: cyan;
-}
 
 
 
