@@ -1,4 +1,22 @@
-/* Reset basic styling */
+:root {
+    --primary-color: #2a2a2a;
+    --secondary-color: #3a3a3a;
+    --text-color: #ffffff;
+    --accent-color: #4CAF50;
+    --sidebar-width: 60px;
+    --sidebar-expanded-width: 240px;
+    --transition-speed: 0.3s;
+    --logo-size: 1.5rem;
+    --text-size: 1rem;
+}
+
+.light-theme {
+    --primary-color: #ffffff;
+    --secondary-color: 
+    --text-color: #2a2a2a;
+    --accent-color: #45a049;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,243 +24,187 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    transition:  0.3s ease, color 0.3s ease;
-    height: 100%;
-    width: 100%;
-}
-
-
-
-
-
-
-/* Toggle Button */
-#modeToggle {
-    position: fixed;
-    top: 10px;
-    right: 30px;
-    padding: 10px;
-    border:none;
-    cursor: pointer;
-    font-size: 25px;
-    transition: all 0.3s ease; /*Smooth transition */
-}
-
-
-
-
-
-
-/* Container for layout */
-.container {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, rgb(255, 255, 255), skyblue);
+    color: var(--text-color);
     display: flex;
-    height: 100vh;
-    overflow: hidden;
+    transition: background-color var(--transition-speed);
+    font-size: var(--text-size);
 }
 
-
-
-
-
-
-/* Sidebar styling */
+/* Sidebar Styles */
 .sidebar {
-    width: 150px; /* Collapsed width */
-    height: 100%;
-    padding-top: 20px;
-    overflow: hidden;
-    transition: width 0.3s ease; /* Smooth transition */
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /*Center menu items vertically */
-    position: relative;
+    transition: width var(--transition-speed);
+    position: fixed;
+    overflow-x: hidden;
 }
 
 .sidebar:hover {
-    width: 400px; /* Expanded width on hover */
+    width: var(--sidebar-expanded-width);
 }
 
+.logo-section {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    justify-content: center;
+}
 
-/* sidebar Logo styling - always visible */
 .logo {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 0px;
+    width: 120px;
+    height: 120px;
 }
 
 .logo img {
-    width: 100%;
+    width: 120%;
     height: auto;
 }
 
+/* .logo-text {
+    margin-left: 1rem;
+    display: none;
+    white-space: nowrap;
+    font-size: var(--text-size);
+} */
 
-/* Search box styling */
-.search-box {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    opacity: 0;
-    transition: opacity  0.3s ease;
-    width: 80%;
-    margin-top: 30px;
-    margin-bottom: 0;
+.sidebar:hover .logo-text {
+    display: block;
 }
 
-.sidebar:hover .search-box {
-    opacity: 1;
-}
-
-.search-box input[type="text"] {
-    padding: 5px;
-    font-size: 16px;
-    border-radius: 4px;
+.search-section {
     width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
 }
 
-.search-box button {
-    padding: 5px;
+.search-input {
+    display: none;
+    width: 70%;
+    padding: 0.5rem;
     border: none;
     border-radius: 4px;
+    margin-right: 0.5rem;
+    font-size: var(--text-size);
+}
+
+.sidebar:hover .search-input {
+    display: block;
+}
+
+.search-btn {
+    background: var(--accent-color);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    color: white;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+    font-size: calc(var(--text-size) * 0.9);
 }
 
-
-/* Sidebar menu styling */
-.sidebar ul {
-    list-style-type: none;
-    padding: 0px;
+.menu {
     width: 100%;
-    margin-top: 10px; /* Add space from logo */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
-    padding-left: 20px;
-    transition: all 0.3s ease; /* Smooth transition */
+    margin-top: 3rem;
 }
 
-.sidebar:hover ul {
-    align-items: center; /* Center-align items when sidebar is expanded */
-    padding-left: 0; /* Remove left padding when centered */
-}
-
-.sidebar ul li {
-    margin: 20px 0;
-    padding-top: 20px;
-    padding-left: 10px; 
-    white-space: nowrap;
+.menu-item {
     display: flex;
     align-items: center;
-    width: 100%;
-    justify-content: flex-start;  /*Left align items by default*/
-    transition: all 0.3s ease; /*Smooth transition */
-} 
-
-.sidebar:hover ul li {
-    justify-content: flex-start; /* Center items when sidebar is expanded */
-    padding-left: 100px;
-}
-
-.sidebar ul li a {
+    padding:2rem 1rem;
     text-decoration: none;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    height: 150%;
-    width: 55%;
-    padding-left: 20px; /* Left padding to space out from sidebar edge */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    color: var(--text-color);
+    transition: background-color var(--transition-speed);
+    font-size: var(--text-size);
 }
 
-.menu-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    transition: transform 0.3s ease; /* Smooth transition for icon */
+.menu-item i {
+    min-width: calc(var(--sidebar-width) - 2rem);
+    text-align: center;
+    font-size: var(--logo-size);
 }
 
-.sidebar ul li a span {
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.3s ease;
+.menu-item span {
+    display: none;
+    margin-left: 1rem;
+}
+
+.sidebar:hover .menu-item span {
+    display: block;
+}
+
+.menu-item:hover, .menu-item.active {
+    background-color: var(--accent-color);
+}
+
+/* Main Content Styles */
+main {
+    margin-left: var(--sidebar-width);
     flex: 1;
-    text-align: left; /* Center-align text */
-    padding-left: 20px;
-    transition: transform 0.3s ease; /* Smooth transition for icon */
+    padding: 1rem;
+    transition: margin-left var(--transition-speed);
 }
 
-.sidebar:hover ul li a span {
-    opacity: 1; /* Show text when sidebar is expanded */
+.sidebar:hover + main {
+    margin-left: var(--sidebar-expanded-width);
 }
 
-.sidebar ul li a:hover {
-    text-decoration: underline;
-    transform: translateX(20px); /* Move icon and text together */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: none;
+    border-radius: 8px;
+    margin-bottom: 2rem;
 }
 
-/* Main content styling */
-.main-content {
-    flex-grow: 100px;
-    padding: 30px;
-    max-width: 1500px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+/* Date and Time Display */
+.date-time .icon {
+    width: 18px;
+    height: 18px;   
 }
 
+.date-time {
+    font-size: var(--text-size);
+    color: orange;
+}
 
-/* Add a new class for the active menu item background color */
-.sidebar ul li a.active {
-    border:solid;
-    border-radius: 5px; /* Optional: Add rounded corners to highlight */
-    transition: background-color 0.3s ease; /* Smooth transition */
+#modeToggle{
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: var(--logo-size);
 }
 
 .page {
-    display: none; /* Hide all pages by default */
-    padding-top: 90px;
+    max-width: 100vw;
+    display: none;
+    padding: 2rem;
+    background: none;
+    border-radius: 8px;
 }
 
 .page.active {
-    display: block; /* Show only the active page */
+    display: block;
 }
-
-
-
-
-
-/* Date and Time Display */
-.date-time {
-    position: absolute;
-    color: orange;
-    font-size: 1rem;
-    opacity: 0.9;
-    z-index: 10; /* Ensure it stays on top */
-}
-  
-.date-time .time, .date-time .date {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-}
-  
-.date-time .icon {
-    width: 18px;
-    height: 18px;
-    margin-right: 8px;
-}
-
-
 
 
 
 /* home page styling */
+
 .intro {
     display: inline-flex;
+    /* flex-wrap: wrap; */
     max-width: 1400px;
     text-align: left; /* Left-aligns all text */
     padding-top: 90px;
@@ -270,7 +232,7 @@ body {
 
 .description {
     font-size: 1rem;
-    margin-top: 10px;
+    margin-top:10px;
     line-height: 1.6;
 }
 
@@ -317,15 +279,9 @@ body {
 
 
 
-
- /* About section */
+/* About section */
 
 .all {
-    height: 78vh; /* Adjust this height as needed */
-    overflow-y: auto; /* Adds a vertical scrollbar if content overflows */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-    scrollbar-width: none;
-    scroll-behavior: smooth;
     padding-top: 2vh;
     padding-bottom: 10vh;
 }
@@ -420,10 +376,6 @@ h2{
 }
 
 #Skills .abc{
-    height: 660px; /* Adjust this height as needed */
-    overflow-y: auto; /* Adds a vertical scrollbar if content overflows */
-    scrollbar-width: none;
-    scroll-behavior: smooth;
     padding-bottom: 50px;
 }
 
@@ -432,11 +384,7 @@ h2{
     text-align: center;
     display: inline-flex;
     flex-wrap: wrap; /* Wrap items to next line if needed */
-    z-index: 1;
-    height: max-content; /* Adjust this height as needed */
-    overflow-y: auto; /* Adds a vertical scrollbar if content overflows */
-    scrollbar-width: none;
-    scroll-behavior: smooth;
+    z-index: 1; 
     justify-content: center;
 }
 
@@ -517,12 +465,7 @@ h2{
     padding: auto;
     margin: 0px;
     flex-wrap: wrap;
-    max-height: 650px;
     text-align: center;
-    overflow-y: auto; /* Adds a vertical scrollbar if content overflows */
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-    scrollbar-width: none;
-    scroll-behavior: smooth;
 }
 
 .project-box {
@@ -663,6 +606,3 @@ h2{
   .info a{
     cursor: pointer;
   }
-
-
-  
