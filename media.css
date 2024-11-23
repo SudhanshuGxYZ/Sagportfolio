@@ -2,50 +2,12 @@
 
 /* Extra Small Devices (up to 480px) */
 @media (max-width: 480px) {
-/* for main */
-    .main-content {
-        width: 100%;
-        padding: 15px;
-    }
 
-/* for sidebar */
-    .sidebar {
-        width: 80px; /* Collapsed width */
-    }
-
-    .sidebar:hover {
-        width: 250px; /* Expanded width */
-    }
-
-    .sidebar ul li {
-        margin: 15px 0;
-    }
-
-    .sidebar ul li a {
-        font-size: 16px;
-        width: 70%;
-    }
-
-    .search-box {
-        margin-top: 10px;
-    }
-
-/* for toggle button */
-    #modeToggle {
-        top: 5px;
-        right: 15px;
-        padding: 8px;
-        font-size: 20px;
-    }
-
-/* for date-time */
-    .date-time {
-        font-size: 0.8rem;
-    }
-
-    .date-time .icon {
-        width: 14px;
-        height: 14px;
+    :root {
+        --sidebar-width: 55px;
+        --sidebar-expanded-width: 220px;
+        --logo-size: 1.2rem;
+        --text-size: 0.9rem;
     }
 
 /* for home Page */
@@ -117,7 +79,7 @@
     }
 
 /* contact section */
-    .contact-section {
+    #contacts{
         flex-direction: column;
         padding: 20px;
     }
@@ -146,50 +108,12 @@
 
 /* Small Devices (481px to 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
-/* for main */
-    .main-content {
-        width: 90%;
-        padding: 20px;
-    }
 
-/* for sidebar */
-    .sidebar {
-        width: 120px; /* Collapsed width */
-    }
-
-    .sidebar:hover {
-        width: 300px; /* Expanded width */
-    }
-
-    .sidebar ul li {
-        margin: 18px 0;
-    }
-
-    .sidebar ul li a {
-        font-size: 17px;
-        width: 65%;
-    }
-
-    .search-box {
-        margin-top: 15px;
-    }
-
-/* for toggle button */
-    #modeToggle {
-        top: 8px;
-        right: 20px;
-        padding: 9px;
-        font-size: 22px;
-    }
-
-/* for date-time */
-    .date-time {
-        font-size: 0.9rem;
-    }
-
-    .date-time .icon {
-        width: 16px;
-        height: 16px;
+    :root {
+        --sidebar-width: 60px;
+        --sidebar-expanded-width: 240px;
+        --logo-size: 1.3rem;
+        --text-size: 0.95rem;
     }
 
 /* for home Page  */
@@ -261,7 +185,7 @@
     }
 
 /* for contact section */
-    .contact-section {
+#contacts{
         flex-direction: column;
         padding: 30px;
     }
@@ -290,52 +214,13 @@
 
 /* Medium Devices (769px to 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
-/* for main */
-    .main-content {
-        width: 85%;
-        padding: 25px;
-    }
 
-/* for sidebar */
-    .sidebar {
-        width: 150px; /* Collapsed width */
+    :root {
+        --sidebar-width: 65px;
+        --sidebar-expanded-width: 260px;
+        --logo-size: 1.4rem;
+        --text-size: 1rem;
     }
-
-    .sidebar:hover {
-        width: 350px; /* Expanded width */
-    }
-
-    .sidebar ul li {
-        margin: 20px 0;
-    }
-
-    .sidebar ul li a {
-        font-size: 18px;
-        width: 60%;
-    }
-
-    .search-box {
-        margin-top: 20px;
-    }
-
-/* for toggle button */
-    #modeToggle {
-        top: 10px;
-        right: 25px;
-        padding: 10px;
-        font-size: 24px;
-    }
-
-/* for date-time */
-    .date-time {
-        font-size: 1rem;
-    }
-
-    .date-time .icon {
-        width: 18px;
-        height: 18px;
-    }
-    
 
 /* for home Page */
     .welcome {
@@ -406,7 +291,7 @@
     }
 
 /* for contact section */
-    .contact-section {
+#contacts{
         padding: 40px;
     }
 
@@ -434,50 +319,12 @@
 
 /* Large Devices (1025px to 1400px) */
 @media (min-width: 1025px) and (max-width: 1400px) {
-/* for main */
-    .main-content {
-        width: 80%;
-        padding: 30px;
-    }
 
-/* for sidebar */
-    .sidebar {
-        width: 180px; /* Collapsed width */
-    }
-
-    .sidebar:hover {
-        width: 400px; /* Expanded width */
-    }
-
-    .sidebar ul li {
-        margin: 22px 0;
-    }
-
-    .sidebar ul li a {
-        font-size: 19px;
-        width: 55%;
-    }
-
-    .search-box {
-        margin-top: 25px;
-    }
-
-/* for toggle button */
-    #modeToggle {
-        top: 10px;
-        right: 30px;
-        padding: 10px;
-        font-size: 25px;
-    }
-
-/* for date-time */
-    .date-time {
-        font-size: 1.2rem;
-    }
-
-    .date-time .icon {
-        width: 20px;
-        height: 20px;
+:root {
+        --sidebar-width: 70px;
+        --sidebar-expanded-width: 280px;
+        --logo-size: 1.5rem;
+        --text-size: 1rem;
     }
 
 /* for home Page */
@@ -549,7 +396,7 @@
     }
 
 /* for contact section */
-    .contact-section {
+    #contacts{
         padding: 50px;
     }
 
@@ -577,51 +424,12 @@
 
 /* Extra Large Devices (larger than 1400px) */
 @media (min-width: 1025px) and (max-width: 1400px) {
-/* for main */
-    .main-content {
-        width: 75%;
-        padding: 40px;
-    }
 
-/* for sidebar */
-    .sidebar {
-        width: 200px; /* Collapsed width */
-    }
-
-    .sidebar:hover {
-        width: 450px; /* Expanded width */
-    }
-
-    .sidebar ul li {
-        margin: 25px 0;
-    }
-
-    .sidebar ul li a {
-        font-size: 20px;
-        width: 50%;
-    }
-
-    .search-box {
-        margin-top: 30px;
-    }
-
-
-/* for toggle button */
-    #modeToggle {
-        top: 10px;
-        right: 40px;
-        padding: 12px;
-        font-size: 30px;
-    }
-
-/* for date-time */
-    .date-time {
-        font-size: 1.5rem;
-    }
-
-    .date-time .icon {
-        width: 24px;
-        height: 24px;
+    :root {
+        --sidebar-width: 75px;
+        --sidebar-expanded-width: 300px;
+        --logo-size: 1.6rem;
+        --text-size: 1.1rem;
     }
 
 /* for home Page */
@@ -698,7 +506,7 @@
     }
 
 /* for contact section */
-.contact-section {
+#contacts {
     padding: 60px;
 }
 
