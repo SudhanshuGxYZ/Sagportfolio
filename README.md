@@ -3,7 +3,8 @@
 Hi,                                                                                                                                                                                                                  
 I am Sudhanshu,                                                                                                                                                                                                 
 this is the source code repository for my personal portfolio. The portfolio is designed to showcase my technical skills, projects, and professional achievements in web development and design. 
- 
+
+ 🌐 Website: https://sudhanshugxyz.github.io/Sagportfolio/
 The portfolio is a reflection of my passion for creating functional and aesthetically pleasing web solutions. It highlights:
 
 #👉 💻 About the Portfolio
@@ -30,8 +31,7 @@ Feel free to explore the live website or fork this repository to use it as a tem
 
 #👉 ✉️ Contact Me 
 If you have any questions, suggestions, or just want to connect, feel free to reach out!  
-📧 Email: sudhanshuanilgotefode@gmail.com                                                                                                                                           
-🌐 Website: https://13sudhanshu.github.io/Sagportfolio/                                                                                                                          
+📧 Email: sudhanshuanilgotefode@gmail.com                                                                                                                                                               
 💼 LinkedIn: www.linkedin.com/in/sagprofile                                                                                                   
 
 
