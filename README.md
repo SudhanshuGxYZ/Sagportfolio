@@ -5,7 +5,10 @@ I am Sudhanshu,
 this is the source code repository for my personal portfolio. The portfolio is designed to showcase my technical skills, projects, and professional achievements in web development and design. 
 
  🌐 Website: [SagPortfolio](https://sudhanshugxyz.github.io/Sagportfolio/)
-The portfolio is a reflection of my passion for creating functional and aesthetically pleasing web solutions. It highlights:
+
+The portfolio is a reflection of my passion for creating functional and aesthetically pleasing web solutions. 
+
+It highlights:
 
 #👉 💻 About the Portfolio
 - **Projects**: A collection of my work across various domains, featuring detailed descriptions, tech stacks, and insights into each project’s purpose and functionality.
